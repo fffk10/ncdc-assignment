@@ -3,31 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* カラー */
+  --light-blue: #4cb3f8;
+  --black80: #333333;
+  --black50: #4d4d4d;
+  --black30: #b3b3b3;
+  --light-blue1: #4cb3f8;
+
+  /* フォントサイズ */
+  --title: 24px;
+  --body: 16px;
+  --caption: 12px;
+  --minimum: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --light-blue1: #c8e6fa;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  color: var(--black80);
+  font-size: var(--body);
 }
