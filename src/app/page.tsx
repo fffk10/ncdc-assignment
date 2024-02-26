@@ -1,5 +1,13 @@
-import Image from 'next/image'
+import ContentEditor from '@/app/components/content-editor'
+import { fetchContents } from '@/app/lib/data'
 
-export default function Home() {
-  return <main></main>
+/**
+ * ホームページ
+ * @returns コンテンツ管理画面
+ */
+const Home = async () => {
+  const contents = (await fetchContents()) ?? []
+  return <ContentEditor initialContents={contents} />
 }
+
+export default Home

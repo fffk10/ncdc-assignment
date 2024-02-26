@@ -1,0 +1,79 @@
+/* キャンセルボタン */
+.cancel-btn {
+  background-color: var(--black30);
+}
+.cancel-btn:hover {
+  background-color: #999999;
+}
+.cancel-btn:active {
+  background-color: #808080;
+}
+.cancel-text {
+  font-size: var(--minimum);
+  color: var(--white);
+}
+
+/* 削除ボタン */
+.delete-btn:hover {
+  background-color: #e6e6e6;
+}
+.delete-btn:active {
+  background-color: #cccccc;
+}
+
+/* 完了ボタン */
+.done-btn {
+  background-color: var(--light-blue);
+  width: 90px;
+}
+.done-btn:hover {
+  background-color: #3c8ec4;
+}
+.done-btn:active {
+  background-color: #347cab;
+}
+.done-text {
+  font-size: var(--minimum);
+  color: var(--white);
+}
+
+/* 編集ボタン */
+.edit-btn {
+  background-color: var(--light-blue);
+}
+.edit-btn:hover {
+  background-color: #3c8ec4;
+}
+.edit-btn:active {
+  background-color: #347cab;
+}
+.edit-text {
+  font-size: var(--minimum);
+  color: var(--white);
+}
+
+/* 新規追加ボタン */
+.plus-btn {
+  background-color: var(--white);
+  border: solid 1px var(--light-blue);
+  width: 90px;
+}
+.plus-btn:hover {
+  background-color: #cccccc;
+}
+.plus-btn:active {
+  background-color: #b3b3b3;
+}
+.plus-text {
+  font-size: var(--minimum);
+  color: var(--light-blue);
+}
+
+/* 保存ボタン */
+.save-btn {
+  background-color: var(--light-blue);
+}
+.save-text {
+  font-size: var(--minimum);
+  color: var(--white);
+}

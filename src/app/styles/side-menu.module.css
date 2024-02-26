@@ -1,0 +1,22 @@
+.container {
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-left: 40px;
+  width: 280px;
+}
+
+.logo {
+  font-family: 'GothamBold';
+  color: #1a1a1a;
+}
+
+.edit {
+  height: 60px;
+  padding: 10px 10px 10px 40px;
+  background-color: var(--bg-light-blue1);
+}
+
+.selected {
+  color: #32a8f8;
+  background-color: #f5f8fa;
+}

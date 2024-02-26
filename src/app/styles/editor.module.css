@@ -1,0 +1,13 @@
+.editor {
+  background-color: var(--bg-light-blue1);
+  padding: 30px;
+}
+
+.title {
+  background: #ffffff;
+  border: 1px solid #4cb3f8;
+  border-radius: 8px;
+  font-size: var(--title);
+  letter-spacing: 0px;
+  line-height: 40px;
+}
