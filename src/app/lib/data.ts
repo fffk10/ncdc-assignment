@@ -1,5 +1,5 @@
 /** APIサーバーURL(ローカル固定) */
-const ENDPOINT_URL = 'http://localhost:3000'
+const ENDPOINT_URL = process.env.NEXT_PUBLIC_API_ENDPOINT
 
 /**
  * コンテンツリストを取得

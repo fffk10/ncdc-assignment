@@ -19,11 +19,11 @@ type EditorProps = {
   updateContents: () => void
 }
 
-const Editor = ({
+const Editor: React.FC<EditorProps> = ({
   selectContent,
   setSelectContent,
   updateContents,
-}: EditorProps) => {
+}) => {
   const [isTitleEdit, setIsTitleEdit] = useState(false)
   const [isBodyEdit, setIsBodyEdit] = useState(false)
   const [editContent, setEditContent] = useState(selectContent)
@@ -105,7 +105,7 @@ const Editor = ({
         {isTitleEdit ? (
           <>
             <input
-              className={`${styles.title} font-bold px-[30px] w-full mr-5`}
+              className={styles.title}
               name='title'
               value={editContent.title}
               onChange={handleContentEdit}
@@ -117,10 +117,10 @@ const Editor = ({
           </>
         ) : (
           <>
-            <h1 className='px-[30px] w-full mr-5 font-bold leading-10 tracking-normal overflow-hidden whitespace-nowrap text-ellipsis'>
+            <h1 className='px-[30px] mr-5 font-bold leading-10 tracking-normal w-full overflow-hidden whitespace-nowrap text-ellipsis'>
               {selectContent.title}
             </h1>
-            <div className='w-[90px]'>
+            <div className='flex w-[90px]'>
               <EditButton
                 key='title-edit'
                 onClick={() => handleEditButton('title')}
@@ -167,9 +167,7 @@ const Editor = ({
   if (editContent && Object.keys(editContent).length === 0) {
     return (
       <div className='flex flex-col w-full pt-8 px-10'>
-        <div
-          className={`${styles.editor} flex flex-col flex-grow border rounded-2xl`}
-        ></div>
+        <div className={styles.editor}></div>
         <Footer />
       </div>
     )
@@ -177,9 +175,7 @@ const Editor = ({
 
   return (
     <div className='flex flex-col w-full pt-8 px-10'>
-      <div
-        className={`${styles.editor} flex flex-col flex-grow border rounded-2xl`}
-      >
+      <div className={styles.editor}>
         {/* title */}
         {editContent && renderTitle()}
 

@@ -1,3 +1,7 @@
 .footer {
   font-size: var(--caption);
+  height: 60px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,8 +1,6 @@
 'use client'
 
-import styles from '@/app/styles/side-menu.module.css'
 import { useState } from 'react'
-import { deleteContent, fetchContents, postContent } from '@/app/lib/data'
 import {
   DeleteButton,
   PlusButton,
@@ -10,6 +8,8 @@ import {
   EditButton,
 } from '@/app/components/common/buttons'
 import Logo from '@/app/components/logo'
+import { deleteContent, fetchContents, postContent } from '@/app/lib/data'
+import styles from '@/app/styles/side-menu.module.css'
 
 type SideMenuProps = {
   /** コンテンツリスト */
@@ -30,12 +30,12 @@ type SideMenuProps = {
  * @param setSelectContent 選択中のコンテンツ更新用
  * @returns サイドメニュー
  */
-const SideMenu = ({
+const SideMenu: React.FC<SideMenuProps> = ({
   contents,
   setContents,
   selectContent,
   setSelectContent,
-}: SideMenuProps) => {
+}) => {
   /** 編集モードかどうか */
   const [isEdit, setIsEdit] = useState(false)
   /**

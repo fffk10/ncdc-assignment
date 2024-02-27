@@ -1,10 +1,8 @@
 import styles from '@/app/styles/footer.module.css'
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <footer
-      className={`${styles.footer} h-[60px] items-center flex justify-between`}
-    >
+    <footer className={styles.footer}>
       <p>Copyright © 2021 Sample</p>
       <p className='cursor-pointer'>運営会社</p>
     </footer>

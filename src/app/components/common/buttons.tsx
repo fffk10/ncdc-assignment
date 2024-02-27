@@ -1,12 +1,11 @@
 import Image from 'next/image'
-import styles from '@/app/styles/buttons.module.css'
-
 import cancel from '@/app/assets/cancel.svg'
 import trash from '@/app/assets/delete.svg'
 import done from '@/app/assets/done.svg'
 import edit from '@/app/assets/edit.svg'
 import plus from '@/app/assets/+.svg'
 import save from '@/app/assets/save.svg'
+import styles from '@/app/styles/buttons.module.css'
 
 /** button用汎用Propsタイプ */
 type CommonButtonProps = {
@@ -18,7 +17,7 @@ type CommonButtonProps = {
  * @param onClick クリック時の処理
  * @returns キャンセルボタン
  */
-export const CancelButton = ({ onClick }: CommonButtonProps) => {
+export const CancelButton: React.FC<CommonButtonProps> = ({ onClick }) => {
   return (
     <button
       className={`${styles['cancel-btn']} w-10 h-10 rounded`}
@@ -41,7 +40,7 @@ export const CancelButton = ({ onClick }: CommonButtonProps) => {
  * @param onClick クリック時の処理
  * @returns 削除ボタン
  */
-export const DeleteButton = ({ onClick }: CommonButtonProps) => {
+export const DeleteButton: React.FC<CommonButtonProps> = ({ onClick }) => {
   return (
     <button className={styles['delete-btn']} onClick={onClick}>
       <Image src={trash} alt='delete-button' width={20} height={20} />
@@ -54,7 +53,7 @@ export const DeleteButton = ({ onClick }: CommonButtonProps) => {
  * @param onClick クリック時の処理
  * @returns 完了ボタン
  */
-export const DoneButton = ({ onClick }: CommonButtonProps) => {
+export const DoneButton: React.FC<CommonButtonProps> = ({ onClick }) => {
   return (
     <button className={`${styles['done-btn']} h-10 rounded`} onClick={onClick}>
       <Image
@@ -74,7 +73,7 @@ export const DoneButton = ({ onClick }: CommonButtonProps) => {
  * @param onClick クリック時の処理
  * @returns 編集ボタン
  */
-export const EditButton = ({ onClick }: CommonButtonProps) => {
+export const EditButton: React.FC<CommonButtonProps> = ({ onClick }) => {
   return (
     <button
       className={`${styles['edit-btn']} w-[90px] h-10 rounded`}
@@ -91,10 +90,10 @@ export const EditButton = ({ onClick }: CommonButtonProps) => {
  * @param onClick クリック時の処理
  * @returns 新規作成ボタン
  */
-export const PlusButton = ({ onClick }: CommonButtonProps) => {
+export const PlusButton: React.FC<CommonButtonProps> = ({ onClick }) => {
   return (
     <button className={`${styles['plus-btn']} rounded`} onClick={onClick}>
-      <Image src={plus} alt='' className='mx-auto' width={24} height={24} />
+      <Image src={plus} alt='' className='mx-auto' width={18} height={18} />
       <p className={styles['plus-text']}>New page</p>
     </button>
   )
@@ -105,7 +104,7 @@ export const PlusButton = ({ onClick }: CommonButtonProps) => {
  * @param onClick クリック時の処理
  * @returns 保存ボタン
  */
-export const SaveButton = ({ onClick }: CommonButtonProps) => {
+export const SaveButton: React.FC<CommonButtonProps> = ({ onClick }) => {
   return (
     <button
       className={`${styles['save-btn']} w-10 h-10 rounded`}

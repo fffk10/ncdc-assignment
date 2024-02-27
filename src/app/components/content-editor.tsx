@@ -14,7 +14,7 @@ type ContentEditorProps = {
  * @param initialContents 初期コンテンツリスト
  * @returns コンテンツエディタ
  */
-const ContentEditor = ({ initialContents }: ContentEditorProps) => {
+const ContentEditor: React.FC<ContentEditorProps> = ({ initialContents }) => {
   const [contents, setContents] = useState<Content[]>(initialContents)
   const [selectContent, setSelectContent] = useState<Content>(
     contents && contents[0]
