@@ -9,9 +9,11 @@
 ## 起動方法
 
 ```bash
-1. npm i
+1. cd ncdc-assignment
 
-2. npm run dev
+2. npm i
+
+3. npm run dev
 ```
 
 [http://localhost:3001](http://localhost:3001)にアクセスでページを確認できます。
