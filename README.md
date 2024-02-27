@@ -32,3 +32,7 @@
     ├── /styles # css modulesフォルダ
     └── /types # 型定義フォルダ
 ```
+
+＃＃ 動作環境
+
+MacOS/Google Chrome
